@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-MART</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <section class="top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-primary" href="#">E-MART</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- href -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">About</a>
+                        </li>
+                        <!-- .................... -->
+
+                        <!-- fev items -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-heart text-danger"
+                                    style="font-size: 1.2rem;"></i></a>
+                        </li>
+                        <!-- ................... -->
+                        <li class="nav-item">
+                            <a class="nav-link " href="#"><i class="bi bi-bell text-info"
+                                    style="font-size: 1.2rem;"></i></a>
+                        </li>
+
+                        <!-- login and sign up -->
+                        <li class="nav-item">
+                            <a class="nav-link " href="login.html"><i class="bi bi-person text-info"
+                                    style="font-size: 1.2rem;"> </i>Sign in / Register</a>
+                        </li>
+                        <!-- ...................................... -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-cart text-info position-relative" style="font-size: 1.2rem;">
+                                    <span id="cart-count"
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning"
+                                        style="font-size:8px;color: black;">0</span>
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- form search logic -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                    <!-- ............. -->
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- .....section second nav -->
+    <section class="top2 mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            All Categories
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="d-flex ms-4 mobile-only">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                    <!-- optional... -->
+                    <!-- <div class="d-flex ms-4">
+                        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#p"><span
+                                class="bi bi-geo-alt  text-dark"></span></button>
+                        <div class="collapse navbar-collapse" id="p">
+                            <p class="text-primary ms-4" id="geo">/p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- /advertise -->
+
+    <main>
+        <section class="property-gallery mb-4">
+            <div class="gallery-container">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="slides">
+                    <img src="images/ads01.jpg " alt="Property Image 1" class="active">
+                    <img src="images/ads02.jpg" alt="Property Image 2">
+
+
+
+
+
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="aboutinfo container-fluid ">
+            <h2 class="text-center mb-5">About us</h2>
+            <div class="d-flex mb-5">
+                <div class="flex-grow-1 align-items-center" style="margin-top: 10%;">
+                    <span class="text-center">
+                        <h3>Clear and Concise Navigation</h3>
+                        <p>
+                        <ul class="list-group  list-group-flush">
+                            <li><b>Simple Menu</b></li>
+                            <li><b>Search Bar</b></li>
+                            <li><b>User-Friendly Layout</b></li>       
+                        </ul>
+                        </p><br>
+                    </span>
+                </div>
+                <div>
+                    <img style="height: 100%; width: 100%;" src="images/ads01.jpg" alt="">
+                </div>
+            </div>
+<!--  -->
+            <div class="d-flex mb-5">
+                <div>
+                    <img style="height: 100%; width: 100%;" src="images/ads01.jpg" alt="">
+                </div>
+                <div class="flex-grow-1 align-items-center" style="margin-top: 10%;">
+                    <span class="text-center">
+                        <h3> Fast and Reliable Shipping</h3>
+                        <p>
+                        <ul class="list-group  list-group-flush">
+                            <li><b>Real-Time Tracking</b></li>
+                            <li><b>Multiple Shipping Options</b></li>
+                            <li><b>Clear Shipping Policies</b></li>       
+                        </ul>
+                        </p><br>
+                    </span>
+                </div>
+               
+            </div>
+            <!--  -->
+            <div class="d-flex mb-5">
+                <div class="flex-grow-1 align-items-center" style="margin-top: 10%;">
+                    <span class="text-center">
+                        <h3>Secure Checkout Process</h3>
+                        <p>
+                        <ul class="list-group  list-group-flush">
+                            <li><b>Multiple Payment Options</b></li>
+                            <li><b>Easy Checkout</b></li>
+                            <li><b>SSL Certificate</b></li>       
+                        </ul>
+                        </p><br>
+                    </span>
+                </div>
+                <div>
+                    <img style="height: 100%; width: 100%;" src="images/ads01.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ............................ -->
+    <!-- Footer -->
+    <section class="bottom">
+        <hr>
+        <div class="container-fluid">
+            <footer class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="" alt="img" id="footimg" class="me-2">
+                    <div>
+                        <i class="bi bi-cart">E-MART</i>
+                    </div>
+                </div>
+                <ul class="footer-list ms-5">
+                    <p>Quick Links</p>
+                    <li class="footer-link">Home</li>
+                    <li class="footer-link">About</li>
+                    <li class="footer-link">Contact</li>
+                </ul>
+                <ul class="footer-list ms-5">
+                    <p>Help</p>
+                    <li class="footer-link">FAQ</li>
+                    <li class="footer-link">Terms and Conditions</li>
+                    <li class="footer-link">Privacy Policy</li>
+                </ul>
+                <ul class="footer-list ms-5">
+                    <p>Follow Us</p>
+                    <li class="footer-link">Facebook</li>
+                    <li class="footer-link">Twitter</li>
+                    <li class="footer-link">Instagram</li>
+                </ul>
+                <img src="" alt="img" id="footimg2" class="ms-2">
+            </footer>
+            <form class="mt-2" id="msg">
+                <input class="input-group-small rounded-pill" style="text-align:center" type="text"
+                    placeholder="Send message">
+                <button class="btn btn-outline-success"><i class="bi bi-send"></i></button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- ............................. -->
+</body>
+
+</html>
